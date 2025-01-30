@@ -1,0 +1,1 @@
+return sum(n % 3 != 0 for n in nums)
