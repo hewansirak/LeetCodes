@@ -1,16 +1,19 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
-        charIndex = {}
-        max_length = 0
+        ct = Counter()
         left = 0
-        
+        longest = 0
+
         for right in range(len(s)):
-            current_char = s[right]
-            
-            if current_char in charIndex and charIndex[current_char] >= left:
-                left = charIndex[current_char] + 1
-            
-            charIndex[current_char] = right
-            max_length = max(max_length, right - left + 1)
-        
-        return max_length
+            # update the running variable
+            ct[s[right]] += 1 # add the right element
+
+            # validating
+            while ct[s[right]] > 1: #abcabcbb
+                ct[s[left]] -= 1
+                left += 1
+
+            # registering the answer
+            longest = max(longest, right - left + 1)
+
+        return longest
