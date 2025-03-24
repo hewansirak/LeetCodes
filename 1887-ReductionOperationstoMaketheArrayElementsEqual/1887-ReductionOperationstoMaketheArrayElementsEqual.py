@@ -1,3 +1,4 @@
+# Last updated: 3/24/2025, 9:53:16 PM
 class Solution:
     def reductionOperations(self, nums: List[int]) -> int:
         nums.sort()  
