@@ -1,4 +1,4 @@
-# Last updated: 4/5/2025, 11:21:20 PM
+# Last updated: 4/5/2025, 11:21:34 PM
 class NumMatrix:
 
     def __init__(self, matrix: List[List[int]]):
