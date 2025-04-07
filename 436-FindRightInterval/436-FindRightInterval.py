@@ -1,18 +1,18 @@
-# Last updated: 4/7/2025, 7:45:52 PM
+# Last updated: 4/7/2025, 7:54:11 PM
 class Solution:
     def findRightInterval(self, intervals: List[List[int]]) -> List[int]:
         n = len(intervals)
-        starts = sorted([(s, i) for i, (s, e) in enumerate(intervals)], key=itemgetter(0))
-        ends = sorted([(e, i) for i, (s, e) in enumerate(intervals)], key=itemgetter(0))
-        res = [-1 for _ in range(n)]
-        sidx = 0
-        for end in ends:
-            e, i = end
-            while starts[sidx][0]<e and sidx+1<n:
-                    sidx += 1
-            if starts[sidx][0] < e:
-                break
-            else:
-                res[i] = starts[sidx][1]
-        return res        
-        
+        starts = sorted([(intervals[k][0], k) for k in range(n)])
+        ends = sorted([(intervals[k][1], k) for k in range(n)])
+        res = [-1] * n
+        j = 0  
+
+        for i in range(n):
+            end_time, original_end_index = ends[i]
+            while j < n and starts[j][0] < end_time:
+                j += 1
+
+            if j < n:
+                start_time, original_start_index = starts[j]
+                res[original_end_index] = original_start_index
+        return res
