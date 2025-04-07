@@ -1,4 +1,4 @@
-# Last updated: 4/2/2025, 10:14:20 PM
+# Last updated: 4/7/2025, 7:45:52 PM
 class Solution:
     def findRightInterval(self, intervals: List[List[int]]) -> List[int]:
         n = len(intervals)
