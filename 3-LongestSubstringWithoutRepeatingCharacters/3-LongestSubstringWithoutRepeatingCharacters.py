@@ -1,3 +1,4 @@
+# Last updated: 4/10/2025, 9:10:21 PM
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         ct = Counter()
@@ -5,15 +6,12 @@ class Solution:
         longest = 0
 
         for right in range(len(s)):
-            # update the running variable
-            ct[s[right]] += 1 # add the right element
+            ct[s[right]] += 1 
 
-            # validating
-            while ct[s[right]] > 1: #abcabcbb
+            while ct[s[right]] > 1:
                 ct[s[left]] -= 1
                 left += 1
 
-            # registering the answer
             longest = max(longest, right - left + 1)
 
         return longest
