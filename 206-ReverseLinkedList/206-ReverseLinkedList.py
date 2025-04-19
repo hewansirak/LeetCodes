@@ -1,3 +1,4 @@
+# Last updated: 4/19/2025, 9:21:42 PM
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, val=0, next=None):
@@ -19,4 +20,4 @@ class Solution:
             pointer.next = temp
             pointer = temp
         
-        return my_head.next
+        return my_head.next        
