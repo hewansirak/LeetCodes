@@ -1,20 +1,19 @@
-# Last updated: 4/20/2025, 10:35:08 PM
+# Last updated: 4/20/2025, 10:37:08 PM
 # Definition for singly-linked list.
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
-
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
 class Solution:
-    def deleteDuplicates(self, head):
-        if not head:
-            return head
-
-        current = head
-        while current.next:
-            if current.val == current.next.val:
-                current.next = current.next.next
+    def deleteDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        if not head:  
+            return None
+        
+        current = head  
+        while current and current.next:
+            if current.val == current.next.val:  
+                current.next = current.next.next  
             else:
-                current = current.next
-
-        return head
+                current = current.next 
+        
+        return head  # Return the modified list
