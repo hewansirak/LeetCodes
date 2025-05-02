@@ -1,11 +1,11 @@
-# Last updated: 5/2/2025, 11:03:08 PM
+# Last updated: 5/2/2025, 11:07:16 PM
 class Solution:
     def findTheWinner(self, n: int, k: int) -> int:
-        res = 0
+        result = 0
 
         for people in range(1, n + 1):
-            res = (res + k) % people
-        return res + 1
+            result = (result + k) % people
+        return result + 1
 
     def helper(n, k):
         if n == 1:
