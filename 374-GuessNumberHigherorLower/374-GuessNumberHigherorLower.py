@@ -1,3 +1,4 @@
+# Last updated: 5/5/2025, 9:07:26 PM
 class Solution:
     def guessNumber(self, n: int) -> int:
         l = 1
