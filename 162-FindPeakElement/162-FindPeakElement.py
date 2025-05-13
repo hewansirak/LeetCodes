@@ -1,4 +1,4 @@
-# Last updated: 5/13/2025, 7:52:18 PM
+# Last updated: 5/13/2025, 7:52:52 PM
 class Solution:
     def findPeakElement(self, nums: List[int]) -> int:
         n = len(nums)
