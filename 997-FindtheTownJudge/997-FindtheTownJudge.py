@@ -1,4 +1,4 @@
-# Last updated: 6/16/2025, 11:04:35 PM
+# Last updated: 6/16/2025, 11:06:33 PM
 class Solution:
     def findJudge(self, n: int, trust: List[List[int]]) -> int:
         if len(trust) == 0 and n == 1: 
