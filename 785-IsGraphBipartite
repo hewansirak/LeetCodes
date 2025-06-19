@@ -1,0 +1,23 @@
+# Last updated: 6/19/2025, 10:36:51 PM
+class Solution:
+    def isBipartite(self, graph: List[List[int]]) -> bool:
+
+        n = len(graph)
+        colors = [-1] * n
+        self.valid = True
+        def dfs(num, e):
+            if colors[num] != -1:
+                if colors[num] != e:
+                    self.valid = False
+                return
+            colors[num] = e
+            e = 0 if e == 1 else 1
+
+            for a in graph[num]:
+                dfs(a, e)
+
+        for i in range(n):
+            if colors[i] == -1:
+                dfs(i, 0)
+        return self.valid
+        
