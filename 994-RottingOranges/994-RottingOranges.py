@@ -1,4 +1,4 @@
-# Last updated: 7/3/2025, 10:42:07 PM
+# Last updated: 7/3/2025, 10:42:59 PM
 class Solution:
     def orangesRotting(self, grid: List[List[int]]) -> int:
         fresh, time = 0,0
