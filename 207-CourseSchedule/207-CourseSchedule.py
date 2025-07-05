@@ -1,4 +1,4 @@
-# Last updated: 6/30/2025, 11:35:17 PM
+# Last updated: 7/5/2025, 11:13:59 PM
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
         adj = defaultdict(list)
