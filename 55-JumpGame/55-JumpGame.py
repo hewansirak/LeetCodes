@@ -1,3 +1,4 @@
+# Last updated: 7/15/2025, 10:33:13 PM
 class Solution:
     def canJump(self, nums: List[int]) -> bool:
         dist = 0
