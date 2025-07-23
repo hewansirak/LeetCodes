@@ -1,3 +1,4 @@
+# Last updated: 7/23/2025, 10:38:57 PM
 class Solution:
     def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:
         res = 0
