@@ -1,4 +1,4 @@
-# Last updated: 7/28/2025, 10:06:34 PM
+# Last updated: 7/28/2025, 11:13:24 PM
 class Solution:
     def minStoneSum(self, piles: List[int], k: int) -> int:
         total = sum(piles)
