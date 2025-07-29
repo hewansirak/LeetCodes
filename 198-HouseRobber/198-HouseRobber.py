@@ -1,10 +1,21 @@
+# Last updated: 7/29/2025, 11:10:01 PM
 class Solution:
     def rob(self, nums: List[int]) -> int:
-        rob1 = 0
-        rob2 = 0
+        n = len(nums)
+        memo = [-1] * n
 
-        for n in nums:
-            temp = max(n + rob1, rob2)
-            rob1 = rob2
-            rob2 = temp
-        return rob2
+        def dp(i):
+            if i >= n:
+                return 0
+
+
+            if memo[i] != -1:
+                return memo[i]
+            rob_current = nums[i] + dp(i + 2)
+
+            skip_current = dp(i + 1)
+
+            memo[i] = max(rob_current, skip_current)
+            return memo[i]
+
+        return dp(0)
