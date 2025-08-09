@@ -1,4 +1,4 @@
-# Last updated: 8/9/2025, 11:24:13 PM
+# Last updated: 8/9/2025, 11:24:28 PM
 class Solution:
     def isSubsequence(self, s: str, t: str) -> bool:
         i, j = 0, 0
