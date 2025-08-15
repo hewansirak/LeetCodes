@@ -1,4 +1,4 @@
-# Last updated: 8/14/2025, 11:40:25 PM
+# Last updated: 8/15/2025, 11:25:39 PM
 class Solution:
     def searchInsert(self, nums: List[int], target: int) -> int:
         left, right = 0, len(nums) - 1
