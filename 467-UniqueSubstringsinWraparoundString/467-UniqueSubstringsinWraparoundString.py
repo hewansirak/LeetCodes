@@ -1,4 +1,4 @@
-# Last updated: 8/22/2025, 10:56:53 PM
+# Last updated: 8/22/2025, 11:52:09 PM
 class Solution:
     def findSubstringInWraproundString(self, s: str) -> int:
         n = len(s)
