@@ -1,4 +1,4 @@
-# Last updated: 8/24/2025, 11:59:24 PM
+# Last updated: 8/24/2025, 11:59:30 PM
 class Solution:
     def change(self, amount: int, coins: List[int]) -> int:
         n = len(coins)
