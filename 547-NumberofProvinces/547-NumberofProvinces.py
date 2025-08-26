@@ -1,4 +1,4 @@
-# Last updated: 6/29/2025, 11:59:11 PM
+# Last updated: 8/26/2025, 10:54:40 PM
 class Solution:
     def findCircleNum(self, isConnected: List[List[int]]) -> int:
         def dfs(i):
