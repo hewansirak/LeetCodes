@@ -1,4 +1,4 @@
-# Last updated: 8/28/2025, 9:33:10 PM
+# Last updated: 8/28/2025, 9:33:30 PM
 class Solution:
     def findRedundantConnection(self, edges: List[List[int]]) -> List[int]:
         parent = [i for i in range(len(edges) + 1)]
