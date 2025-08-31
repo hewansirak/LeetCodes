@@ -1,4 +1,4 @@
-# Last updated: 8/31/2025, 11:44:10 PM
+# Last updated: 8/31/2025, 11:46:00 PM
 class Solution:
     def equationsPossible(self, equations: List[str]) -> bool:
         parent  = {}
