@@ -1,9 +1,9 @@
+# Last updated: 9/20/2025, 10:51:44 PM
 class Solution:
     def maxCoins(self, piles: List[int]) -> int:
         piles.sort()
-        total_coins = 0
+        total = 0
         pair = len(piles) // 3
         for i in range(pair, len(piles), 2):
-            total_coins += piles[i]
-        return total_coins
-        
+            total += piles[i]
+        return total
