@@ -1,4 +1,4 @@
-# Last updated: 9/30/2025, 11:26:36 PM
+# Last updated: 9/30/2025, 11:26:42 PM
 class Solution:
     def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
         graph = collections.defaultdict(list)
