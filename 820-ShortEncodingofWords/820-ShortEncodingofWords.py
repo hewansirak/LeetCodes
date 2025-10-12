@@ -1,4 +1,4 @@
-# Last updated: 10/12/2025, 11:34:01 PM
+# Last updated: 10/12/2025, 11:34:10 PM
 class TrieNode:
     def __init__(self, ch: Optional[str]='#'):
         self.ch = ch
@@ -12,10 +12,10 @@ class Trie:
     def add(self, word: str) -> None:
         curr = self.root
         for i in range(len(word)):
-            if word[~i] not in curr.cd:  # ~i = -i-1
+            if word[~i] not in curr.cd:
                 curr.cd[word[~i]] = TrieNode(word[~i])
             curr = curr.cd[word[~i]]
-        curr.end = True  # mark the end of the word
+        curr.end = True  
 
 class Solution:
     def minimumLengthEncoding(self, words: List[str]) -> int:
