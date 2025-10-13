@@ -1,23 +1,34 @@
-# Last updated: 6/6/2025, 11:41:12 PM
+# Last updated: 10/13/2025, 1:24:56 PM
 class Solution:
     def exist(self, board: List[List[str]], word: str) -> bool:
-        def backtrack(i, j, k):
-            if k == len(word):
-                return True
-            if i < 0 or i >= len(board) or j < 0 or j >= len(board[0]) or board[i][j] != word[k]:
-                return False
-            
-            temp = board[i][j]
-            board[i][j] = ''
-            
-            if backtrack(i+1, j, k+1) or backtrack(i-1, j, k+1) or backtrack(i, j+1, k+1) or backtrack(i, j-1, k+1):
-                return True
-            
-            board[i][j] = temp
-            return False
         
-        for i in range(len(board)):
-            for j in range(len(board[0])):
-                if backtrack(i, j, 0):
+        # If first letter matches 
+        # dfs search
+        # mark visited & explore the 4 directions
+        # unmark
+
+        rows = len(board)
+        cols = len(board[0])
+
+        def dfs(r, c, i):
+
+            if i == len(word):
+                return True
+            if r < 0 or c < 0 or r >= rows or c >= cols or board[r][c] != word[i]:
+                return False           
+
+            temp, board[r][c] = board[r][c], "#"
+            found = (dfs(r+1, c, i+1) or 
+                    dfs(r-1, c, i+1) or
+                    dfs(r, c+1, i+1) or
+                    dfs(r, c-1, i+1)
+                    )
+            board[r][c] = temp
+            return found
+        
+        for r in range(rows):
+            for c in range(cols):
+                if board[r][c] == word[0] and dfs(r, c, 0):
                     return True
-        return False       
+        return False
+            
