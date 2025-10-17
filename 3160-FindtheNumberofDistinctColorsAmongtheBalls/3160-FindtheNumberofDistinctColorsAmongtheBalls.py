@@ -1,5 +1,6 @@
+# Last updated: 10/17/2025, 10:37:24 PM
 class Solution:
-    def queryResults(self, limit: int, queries: list[list[int]]) -> list[int]:
+    def queryResults(self, limit: int, queries: List[List[int]]) -> List[int]:
         node, color = {}, {}
         ans = []
 
@@ -18,4 +19,4 @@ class Solution:
             color[y] = color.get(y, 0) + 1
             ans.append(len(color))
 
-        return ans
+        return ans        
