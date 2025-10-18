@@ -1,15 +1,13 @@
+# Last updated: 10/18/2025, 10:37:34 PM
 class Solution:
-    def majorityElement(self, nums: list[int]) -> list[int]:
-        # Create a Counter to store the count of each element
-        element_count = Counter(nums)
+    def majorityElement(self, nums: List[int]) -> List[int]:
+        count = Counter(nums)
         
-        majority_elements = []
+        majority = []
         threshold = len(nums) // 3
         
-        # Iterate through the element count to identify majority elements
-        for element, count in element_count.items():
-            # Check if the element count is greater than the threshold
+        for element, count in count.items():
             if count > threshold:
-                majority_elements.append(element)
+                majority.append(element)
         
-        return majority_elements
+        return majority
