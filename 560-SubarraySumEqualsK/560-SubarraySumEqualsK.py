@@ -1,4 +1,4 @@
-# Last updated: 10/21/2025, 11:57:35 PM
+# Last updated: 10/21/2025, 11:58:19 PM
 class Solution:
     def subarraySum(self, nums: List[int], k: int) -> int:
 
