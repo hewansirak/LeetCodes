@@ -1,4 +1,4 @@
-# Last updated: 10/20/2025, 10:09:28 PM
+# Last updated: 10/22/2025, 6:45:24 AM
 class MinStack:
 
     def __init__(self):
@@ -7,12 +7,11 @@ class MinStack:
 
     def push(self, val: int) -> None:
         self.stack.append(val)
-        if not self.MinStack or self.MinStack[-1] >= val:
-            self.MinStack.append(val)
+        val = min(val, self.MinStack[-1] if self.MinStack else val)
+        self.MinStack.append(val)
 
     def pop(self) -> None:
-        if self.stack[-1] == self.MinStack[-1]:
-            self.MinStack.pop()
+        self.MinStack.pop()
         self.stack.pop()
 
     def top(self) -> int:
