@@ -1,4 +1,4 @@
-# Last updated: 10/22/2025, 9:40:53 PM
+# Last updated: 10/22/2025, 9:42:36 PM
 class Solution:
     def twoCitySchedCost(self, costs: List[List[int]]) -> int:
 
