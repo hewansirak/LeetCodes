@@ -1,4 +1,4 @@
-# Last updated: 10/23/2025, 10:28:10 AM
+# Last updated: 10/23/2025, 10:28:18 AM
 class Node:
     def __init__(self, key, val):
         self.key = key
@@ -51,7 +51,6 @@ class LRUCache:
             self.remove(lru)
             del self.cache[lru.key]
         
-
 
 # Your LRUCache object will be instantiated and called as such:
 # obj = LRUCache(capacity)
