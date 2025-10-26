@@ -1,4 +1,4 @@
-# Last updated: 10/25/2025, 9:43:21 PM
+# Last updated: 10/26/2025, 10:38:49 PM
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         count = Counter()
