@@ -1,7 +1,7 @@
-# Last updated: 10/9/2025, 11:50:39 PM
+# Last updated: 10/29/2025, 11:45:25 PM
 class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> List[str]:
-        word_set = set(wordDict)
+        wordSet = set(wordDict)
         memo = {}
 
         def backtrack(start):
@@ -10,17 +10,18 @@ class Solution:
             if start == len(s):
                 return [""]
 
-            sentences = []
+            results = []
             for end in range(start + 1, len(s) + 1):
                 word = s[start:end]
-                if word in word_set:
-                    for subsentence in backtrack(end):
-                        if subsentence:
-                            sentences.append(word + " " + subsentence)
+                
+                if word in wordSet:
+                    for sentense in backtrack(end):
+                        if sentense:
+                            results.append(word + " " + sentense)
                         else:
-                            sentences.append(word)
+                            results.append(word)
 
-            memo[start] = sentences
-            return sentences
+            memo[start] = results
+            return results
 
         return backtrack(0)
