@@ -1,3 +1,4 @@
+# Last updated: 11/2/2025, 11:56:04 PM
 class Solution:
     def targetIndices(self, nums: List[int], target: int) -> List[int]:
 
@@ -19,4 +20,3 @@ class Solution:
                 result.append(i)
 
         return result
-            
