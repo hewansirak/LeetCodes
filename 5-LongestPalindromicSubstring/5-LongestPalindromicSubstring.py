@@ -1,4 +1,4 @@
-# Last updated: 11/5/2025, 11:21:07 PM
+# Last updated: 11/5/2025, 11:21:25 PM
 class Solution:
     def longestPalindrome(self, s: str) -> str:
         def is_palindrome(sub):
