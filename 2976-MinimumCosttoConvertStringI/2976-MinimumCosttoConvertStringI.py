@@ -1,4 +1,4 @@
-# Last updated: 11/6/2025, 11:42:37 PM
+# Last updated: 11/6/2025, 11:42:42 PM
 class Solution:
     def minimumCost(self, source: str, target: str, original: List[str], changed: List[str], cost: List[int]) -> int:
 
