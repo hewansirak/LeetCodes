@@ -1,19 +1,29 @@
-# Last updated: 9/3/2025, 11:49:14 PM
+# Last updated: 11/12/2025, 10:52:23 PM
 class Solution:
     def change(self, amount: int, coins: List[int]) -> int:
-        n = len(coins)
-        dp = [[0 for _ in range(n+1)] for _ in range(amount+1)]
+        dp = [[0] * (len(coins) + 1) for i in range(amount + 1)]
+        dp[0] = [1] * (len(coins) + 1)
+
+        for a in range(1, amount + 1):
+            for i in range(len(coins) - 1, -1, -1):
+                dp[a][i] = dp[a][i + 1]
+                if a - coins[i] >= 0:
+                    dp[a][i] += dp[a - coins[i]][i]
         
-        for i in range(amount):
-            dp[i][n] = 0
-        for i in range(n+1):
-            dp[0][i] = 1
-        
-        for target in range(1, amount+1):
-            for i in range(n-1,-1,-1):
-                if target - coins[i] < 0:
-                    dp[target][i] = dp[target][i+1]
-                else:
-                    dp[target][i] = dp[target][i+1] + dp[target-coins[i]][i]
-        print(dp)
         return dp[amount][0]
+
+        cache = {}
+
+        def dfs(i, a):
+            if a == amount:
+                return 1
+            if a > amount:
+                return 0
+            if i == len(coins):
+                return 0
+            
+            if (i, a) in cache:
+                return cache[(i, a)]
+            
+            cache[(i, a)] = dfs(i, a + coins[i]) + dfs(i + 1, a)
+            return cache[(i, a)]
