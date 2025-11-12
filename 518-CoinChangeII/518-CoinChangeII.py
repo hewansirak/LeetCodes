@@ -1,4 +1,4 @@
-# Last updated: 11/12/2025, 10:52:23 PM
+# Last updated: 11/12/2025, 10:52:29 PM
 class Solution:
     def change(self, amount: int, coins: List[int]) -> int:
         dp = [[0] * (len(coins) + 1) for i in range(amount + 1)]
