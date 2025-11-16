@@ -1,4 +1,4 @@
-# Last updated: 11/16/2025, 10:33:41 PM
+# Last updated: 11/16/2025, 10:34:45 PM
 class Solution:
     def subarraysWithKDistinct(self, nums: List[int], k: int) -> int:
         return self.solve(nums, k) - self.solve(nums, k - 1)
