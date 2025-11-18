@@ -1,16 +1,11 @@
-# Last updated: 11/17/2025, 11:43:28 PM
+# Last updated: 11/18/2025, 11:32:10 PM
 class Solution:
     def findLucky(self, arr: List[int]) -> int:
-        luckiest = -1
+        count = Counter(arr)
+
+        ans = -1
+        for k, freq in count.items():
+            if k == freq and k > ans:
+                ans = k
         
-        for num in range(1, 501):
-            count = 0
-            
-            for i in range(len(arr)):
-                if arr[i] == num:
-                    count += 1
-            
-            if count == num:
-                luckiest = max(luckiest, num)
-        
-        return luckiest
+        return ans
