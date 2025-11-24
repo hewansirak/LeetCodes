@@ -1,4 +1,4 @@
-# Last updated: 11/24/2025, 10:47:01 PM
+# Last updated: 11/24/2025, 10:47:09 PM
 class Solution:
     def minimumWeight(self, n: int, edges: List[List[int]], src1: int, src2: int, dest: int) -> int:
         graph = [[] for _ in range(n)]
