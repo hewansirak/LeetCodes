@@ -1,4 +1,4 @@
-# Last updated: 11/26/2025, 10:53:50 PM
+# Last updated: 11/27/2025, 10:49:47 PM
 1class Solution:
 2    def kthGrammar(self, n: int, k: int) -> int:
 3        same = True
