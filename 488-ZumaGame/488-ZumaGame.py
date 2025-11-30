@@ -1,4 +1,4 @@
-# Last updated: 11/30/2025, 10:40:42 PM
+# Last updated: 11/30/2025, 10:40:49 PM
 1class Solution:
 2    def findMinStep(self, board: str, hand: str) -> int:
 3        
