@@ -1,4 +1,4 @@
-# Last updated: 12/16/2025, 12:01:10 AM
+# Last updated: 12/16/2025, 12:01:20 AM
 1class Solution:
 2    def isMatch(self, s: str, p: str) -> bool:
 3        n, m = len(s), len(p)
