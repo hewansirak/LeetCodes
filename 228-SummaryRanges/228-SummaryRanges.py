@@ -1,4 +1,4 @@
-# Last updated: 12/20/2025, 10:14:43 PM
+# Last updated: 12/21/2025, 9:18:09 PM
 1class Solution:
 2    def summaryRanges(self, nums: List[int]) -> List[str]:
 3        ans = []
