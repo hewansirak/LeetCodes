@@ -1,4 +1,4 @@
-# Last updated: 12/19/2025, 10:50:11 PM
+# Last updated: 12/22/2025, 10:05:52 PM
 1class Solution:
 2    def minimumTime(self, s: str) -> int:
 3        length, start, res = len(s), 0, len(s)
